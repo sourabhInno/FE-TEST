@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_location
     - field.storage.node.field_match_carousel_image
     - field.storage.node.field_match_date
+    - field.storage.node.field_playing_team_name
     - field.storage.node.field_team_code_name
     - node.type.match
   module:
@@ -475,6 +476,69 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_playing_team_name:
+          id: field_playing_team_name
+          table: node__field_playing_team_name
+          field: field_playing_team_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 2
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ':'
+          field_api_classes: false
         nothing:
           id: nothing
           table: views
@@ -487,7 +551,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ field_match_carousel_image }}\r\n{{ title }}\r\n{{ field_team_code_name }}\r\n{{ field_match_date }}\r\n{{ field_match_date_1 }}\r\n{{ field_location }}\r\n{{ field_description }}"
+            text: "{{ field_match_carousel_image }}\r\n<div class = \"match-content\">\r\n{% if field_playing_team_name|split(':')[0] == 'India'  %}\r\n<p>GoIndia</p>\r\n{% endif %}\r\n<div class = \"match-heading\">\r\n{{ title }}\r\n<p>{{ field_team_code_name }}</p>\r\n</div>\r\n<div class = \"match-date\">\r\n<p>{{ field_match_date }}</p>\r\n<p>{{ field_match_date_1 }} PM ONWARDS</p>\r\n</div>\r\n<div class = \"match-location\">\r\n<p>LIVE FROM {{ field_location }}</p>\r\n</div>\r\n<div class = \"match-body\">\r\n<p>{{ field_description }}</p>\r\n</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -548,16 +612,14 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        field_match_date_value:
+          id: field_match_date_value
+          table: node__field_match_date
+          field: field_match_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+          plugin_id: datetime
           order: ASC
           expose:
             label: ''
@@ -599,7 +661,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: slider
+      css_class: ''
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -615,6 +677,7 @@ display:
         - 'config:field.storage.node.field_location'
         - 'config:field.storage.node.field_match_carousel_image'
         - 'config:field.storage.node.field_match_date'
+        - 'config:field.storage.node.field_playing_team_name'
         - 'config:field.storage.node.field_team_code_name'
   block_1:
     id: block_1
@@ -635,4 +698,5 @@ display:
         - 'config:field.storage.node.field_location'
         - 'config:field.storage.node.field_match_carousel_image'
         - 'config:field.storage.node.field_match_date'
+        - 'config:field.storage.node.field_playing_team_name'
         - 'config:field.storage.node.field_team_code_name'

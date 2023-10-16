@@ -1,0 +1,18 @@
+uuid: 98059f9b-fbc9-4b29-a3fa-f473c0326027
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Match
+type: match
+description: 'A content type for creating any cricket match'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

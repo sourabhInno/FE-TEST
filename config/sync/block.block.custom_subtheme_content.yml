@@ -1,0 +1,26 @@
+uuid: 6c750611-8623-4d61-918d-d67de69d043c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - custom_subtheme
+_core:
+  default_config_hash: lTrX1YRyhLQrw2BGJQy2_Wxc3fq3kn6pOekLv3WrzOQ
+id: custom_subtheme_content
+theme: custom_subtheme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

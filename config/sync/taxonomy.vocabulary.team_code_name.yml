@@ -1,0 +1,8 @@
+uuid: 5cc82075-f731-403f-b54f-d27fb7e082c2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Team Code Name'
+vid: team_code_name
+description: 'Taxonomy term for cricket team code name'
+weight: 0

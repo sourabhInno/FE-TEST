@@ -1,0 +1,19 @@
+uuid: 937f7369-7078-4595-b4a0-df53eb2936ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.match
+id: node.match.field_location
+field_name: field_location
+entity_type: node
+bundle: match
+label: Location
+description: 'Venue of the cricket match'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

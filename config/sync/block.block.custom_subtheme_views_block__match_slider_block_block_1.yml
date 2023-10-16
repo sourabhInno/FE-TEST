@@ -1,0 +1,29 @@
+uuid: 0b1ee97d-74e0-486b-bb83-c662ec8519aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.match_slider_block
+  module:
+    - system
+    - views
+  theme:
+    - custom_subtheme
+id: custom_subtheme_views_block__match_slider_block_block_1
+theme: custom_subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:match_slider_block-block_1'
+settings:
+  id: 'views_block:match_slider_block-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

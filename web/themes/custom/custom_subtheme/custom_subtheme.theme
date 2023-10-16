@@ -14,7 +14,7 @@ function custom_subtheme_preprocess_html(&$variables)
   $node_url = \Drupal::request()->getRequestUri();
 
   // Check whether the node url is of required node or not.
-  if ($node_url === '/home' || $node_url === '/home') {
+  if ($node_url === '/' || $node_url === '/home') {
 
     // Attach the custom_theme/custom-render library to the page.
     $variables['#attached']['library'][] = 'custom_subtheme/match-page-styling';

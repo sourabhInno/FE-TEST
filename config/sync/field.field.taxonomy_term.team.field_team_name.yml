@@ -1,0 +1,19 @@
+uuid: 028ef7ac-336b-4499-ac45-91a467902fae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_team_name
+    - taxonomy.vocabulary.team
+id: taxonomy_term.team.field_team_name
+field_name: field_team_name
+entity_type: taxonomy_term
+bundle: team
+label: 'Team Name'
+description: 'Cricket Team Name '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

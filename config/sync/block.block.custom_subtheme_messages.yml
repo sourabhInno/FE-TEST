@@ -1,0 +1,22 @@
+uuid: 26439e89-1d3c-44f6-975e-0643619210cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - custom_subtheme
+_core:
+  default_config_hash: ua6kGHB0I2N8yiydO_aT1Ts7taZZLjD1nrX1onBNUbQ
+id: custom_subtheme_messages
+theme: custom_subtheme
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: a59e2135-7c24-4209-b6b3-df6304934fef
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.team_code_name
+id: taxonomy_term.team_code_name.default
+targetEntityType: taxonomy_term
+bundle: team_code_name
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

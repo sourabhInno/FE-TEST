@@ -1,0 +1,10 @@
+@use "../partials/importer" as *;
+
+// Reset default margin, padding, and box-sizing for all elements
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

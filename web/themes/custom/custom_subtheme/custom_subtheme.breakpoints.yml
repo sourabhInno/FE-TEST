@@ -1,0 +1,35 @@
+custom_subtheme.screen.lg-max:
+  label: lg-max
+  mediaQuery: "(max-width: 1199.98px)"
+  weight: 1
+  group: custom_subtheme.screen
+  multipliers:
+    - 1x
+    - 2x
+
+custom_subtheme.screen.xl-min:
+  label: xl-min
+  mediaQuery: "(min-width: 1200px)"
+  weight: 2
+  group: custom_subtheme.screen
+  multipliers:
+    - 1x
+    - 2x
+
+custom_subtheme.screen.xl-max:
+  label: xl-max
+  mediaQuery: "(max-width: 1399.98px)"
+  weight: 3
+  group: custom_subtheme.screen
+  multipliers:
+    - 1x
+    - 2x
+
+custom_subtheme.screen.xxl-min:
+  label: xxl-min
+  mediaQuery: "(min-width: 1400px)"
+  weight: 4
+  group: custom_subtheme.screen
+  multipliers:
+    - 1x
+    - 2x
